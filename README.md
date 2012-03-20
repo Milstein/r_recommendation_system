@@ -36,6 +36,7 @@ Submission
 You should turn in a write-up and the source code, contained in a zip file, on coursekit. You will be graded primarily on your writeup.
 
 **report.pdf**: The writeup should be self-explanatory, and with sufficient details in a way that audiences not taking this class could follow your writeup to reproduce the results. Important points to cover (but not limited to) include:
+
 * Models you implemented and the significant choices you made (e.g. batch vs stochastic gradient descent, regularization, distance metrics).
 * Parameters (e.g. number of latent factors, feature selections) you tuned and how that affected performance, both performance in terms of run-time and in terms of quality.
 * Tables or figures of the ROC plot, AUC scores for comparing parameters and models.
