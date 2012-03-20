@@ -1,6 +1,6 @@
 #!/usr/bin/Rscript
 
-source('example_model.R')
+source('example_model_2.R')
 
 training.data$LogitProbabilities <- 1 / (1 + exp(-predict(logit.fit)))
 

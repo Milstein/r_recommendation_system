@@ -1,7 +1,8 @@
 #!/usr/bin/Rscript
 
 library('ProjectTemplate')
-try(load.project())
+#try(load.project())
+source("lib/boot.R")
 
 logit.fit <- glm(Installed ~ LogDependencyCount +
                              LogSuggestionCount +
