@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>R recommendation system by rxin</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>R recommendation system</h1>
+        <p>Assignment 3 for the Data Science course at UC Berkeley</p>
+        <p class="view"><a href="https://github.com/rxin/r_recommendation_system">View the Project on GitHub <small>rxin/r_recommendation_system</small></a></p>
+        <ul>
+          <li><a href="https://github.com/rxin/r_recommendation_system/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/rxin/r_recommendation_system/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/rxin/r_recommendation_system">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>CS194-16 Data Science Assignment 3 - Collaborative Filtering</h1>
+
+<h1>UC Berkeley</h1>
+
+<p>In this assignment, you will implement and evaluate two different models of collaborative filtering on the R package recommendation dataset. Models can take a while to tune, train, and evaluate. Start early!</p>
+
+<h2>Preparation and Dataset</h2>
+
+<p>We will be using the R package recommendation dataset. The dataset was used for a competition hosted by Kaggle. You can find the description here: <a href="https://www.kaggle.com/c/R">https://www.kaggle.com/c/R</a> [1].</p>
+
+<p>We have packaged the necessary files in a github repository for you: <a href="https://github.com/rxin/r_recommendation_system">https://github.com/rxin/r_recommendation_system</a></p>
+
+<p>Main files of interest in this repository include:</p>
+
+<ul>
+<li>pmf.py: A Python implementation of Probabilistic Matrix Factorization.</li>
+<li>competition/example_model*: Logistic regression based recommendation models in R.</li>
+<li>competition/data/training_data.csv: The training data set.</li>
+</ul><h2>Models</h2>
+
+<p>You should evaluate two different models for collaborative filtering, one of which should be based on the Probabilistic Matrix Factorization (PMF) code provided in class [3]. You will need to write code for transforming the training data into the desired input for the provided PMF code as well as code to do the binary predictions and evaluations.</p>
+
+<p>You have freedom to choose the second model you would like to test. Some simple models include linear regression, logistic regression, K nearest neighbor. You are free to use the language of your choice, although Python or R is preferred. [2] provides three example logistic regression models implemented in R. Even for a simple logistic regression model, you will have a lot of freedom in feature selection. For example, you can produce new features by combining existing, preset features.</p>
+
+<p>Depending on how robust your models are, you might need to clean the data before training. For example, the training data file contains duplicated entries and sometimes missing values for the “Installed” field. You will need to remove these entries for training and evaluation.</p>
+
+<h2>Evaluation</h2>
+
+<p>To understand the performance of your models, you should do a 10-fold cross-validation of them and compute AUC (area under the receiver operator curve). See wikipedia [4] for the definition of k-fold cross-validation and the Kaggle competition page for how to compute AUC [5].</p>
+
+<p>Some models might require you to tune parameters (e.g. in the case of PMF, the number of latent features) and select features. You should experiment with different combinations.</p>
+
+<h2>Submission</h2>
+
+<p>You should turn in a write-up and the source code, contained in a zip file, on coursekit. You will be graded primarily on your writeup.</p>
+
+<p><strong>report.pdf</strong>: The writeup should be self-explanatory, and with sufficient details in a way that audiences not taking this class could follow your writeup to reproduce the results. Important points to cover (but not limited to) include:</p>
+
+<ul>
+<li>Models you implemented and the significant choices you made (e.g. batch vs stochastic gradient descent, regularization, distance metrics).</li>
+<li>Parameters (e.g. number of latent factors, feature selections) you tuned and how that affected performance, both performance in terms of run-time and in terms of quality.</li>
+<li>Tables or figures of the ROC plot, AUC scores for comparing parameters and models.</li>
+<li>Observations you made about the models or data. This is more interesting than having a reiteration of the formal definitions of the various models.</li>
+</ul><p>There is no set length for write-ups, but you can target about 3-4 pages, including your evaluation results, a graph or two, and some interesting examples.</p>
+
+<p><strong>Source code</strong>: Include the source code along with instructions (name it README) on how to run the code.</p>
+
+<h2>Resources</h2>
+
+<p>[1] Kaggle R package recommendation competition: <a href="https://www.kaggle.com/c/R">https://www.kaggle.com/c/R</a></p>
+
+<p>[2] Github repository: <a href="https://github.com/rxin/r_recommendation_system">https://github.com/rxin/r_recommendation_system</a></p>
+
+<p>[3] Probabilistic Matrix Factorization: <a href="https://github.com/rxin/r_recommendation_system/blob/master/pmf.py">https://github.com/rxin/r_recommendation_system/blob/master/pmf.py</a></p>
+
+<p>[4] k-fold cross validation: <a href="http://en.wikipedia.org/wiki/Cross-validation_(statistics)#K-fold_cross-validation">http://en.wikipedia.org/wiki/Cross-validation_(statistics)#K-fold_cross-validation</a></p>
+
+<p>[5] AUC and ROC: <a href="https://www.kaggle.com/c/R/details/Evaluation">https://www.kaggle.com/c/R/details/Evaluation</a></p>
+
+<h2>Acknowledgement</h2>
+
+<p>We would like to thank Lei Li of UC Berkeley and Yang Zhang of Slice Data for providing feedback on this assignment, Danny Tarlow of University of Toronto for his implementation of probabilistic matrix factorization, and finally Kaggle and Dataists for the R recommendation dataset.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/rxin">rxin</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
